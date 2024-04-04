@@ -2,11 +2,15 @@ PATH
   remote: .
   specs:
     whats_the_temp (0.1.0)
+      dry-credentials (~> 0.2.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    base64 (0.2.0)
+    dry-credentials (0.2.1)
+      base64 (~> 0)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
     minitest (5.22.3)
