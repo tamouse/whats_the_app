@@ -20,8 +20,7 @@ module WhatsTheTemp
     end
 
     def test_create_url
-      # assert_equal "http://api.weatherapi.com/v1/current.json?key=d83c18de62814e559d1143220240404&q=55118&aqi=no",
-      assert_equal  "http://api.weatherapi.com/v1/current.json?key=d83c18de62814e559d1143220240404&q=55118&aqi=no",
+      assert_equal  "http://api.weatherapi.com/v1/current.json?key=#{WhatsTheTemp::WeatherApi::API_KEY}&q=55118&aqi=no",
                     @w.send(:create_url, @zip).to_s
     end
 

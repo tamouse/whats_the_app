@@ -9,7 +9,7 @@ require "json"
 module WhatsTheTemp
   # Client for the weatherapi.com API
   class WeatherApi
-    API_KEY = "d83c18de62814e559d1143220240404" # Normally, you should put this into an encrypted file
+    API_KEY = ENV.fetch("WEATHER_API_KEY")
     BASE_URL = "http://api.weatherapi.com/v1/current.json"
 
     # @return [Float] the current temperature in Fahrenheit
