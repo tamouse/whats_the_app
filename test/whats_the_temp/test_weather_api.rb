@@ -22,11 +22,11 @@ module WhatsTheTemp
     def test_create_url
       # assert_equal "http://api.weatherapi.com/v1/current.json?key=d83c18de62814e559d1143220240404&q=55118&aqi=no",
       assert_equal  "http://api.weatherapi.com/v1/current.json?key=d83c18de62814e559d1143220240404&q=55118&aqi=no",
-                    @w.create_url(@zip).to_s
+                    @w.send(:create_url, @zip).to_s
     end
 
     def test_get_weather_for
-      response = @w.get_weather_for @zip
+      response = @w.send :get_weather_for, @zip
 
       refute_nil response
 

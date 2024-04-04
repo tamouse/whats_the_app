@@ -1,0 +1,5 @@
+module WhatsTheTemp
+  class WeatherApi
+    def current_temp_for: -> Float
+  end
+end
