@@ -3,7 +3,7 @@
 
 require "whats_the_temp"
 
-USAGE = %{
+USAGE = %(
 WEATHER: Provides the current temperature in Fahrenheit for the given address.
 
 USAGE: weather [-h | --help | <address>]
@@ -15,17 +15,17 @@ USAGE: weather [-h | --help | <address>]
   - lat,long
   - IP address
 
-}
+)
 
 arg = ARGV.first.to_s
 
-if arg == "-h" || arg == "--help"
+if ["-h", "--help"].include?(arg)
   puts USAGE
   exit 0
 elsif arg.match?(/^-+/)
   warn "Invalid option #{arg.inspect}\n"
   puts USAGE
-  exit -1
+  exit(-1)
 else
   temp = WhatsTheTemp::WeatherApi.new.current_temp_for(arg)
   puts "Current temperature for #{arg}: #{temp.inspect}"
