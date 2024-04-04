@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+require "whats_the_temp"
