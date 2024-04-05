@@ -2,3 +2,5 @@
 # frozen_string_literal: true
 
 require "whats_the_temp"
+
+WhatsTheTemp::CLI.call

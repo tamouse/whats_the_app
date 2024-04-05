@@ -16,3 +16,13 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+Minitest/EmptyLineBeforeAssertionMethods:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/ParameterLists:
+  Max: 6
+  MaxOptionalParameters: 5

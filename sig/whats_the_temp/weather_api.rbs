@@ -1,0 +1,13 @@
+module WhatsTheTemp
+  class WeatherApi
+    API_KEY: String
+    BASE_URL: String
+
+    def current_temp_for: -> Float
+
+    private
+
+    def create_url: -> URI::Generic
+    def get_weather_for: -> Hash[String, String]
+  end
+end
