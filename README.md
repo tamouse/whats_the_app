@@ -1,31 +1,47 @@
 # WhatsTheTemp
 
-TODO: Delete this and the text below, and describe your gem
+A Ruby CLI app to show the current temperature for a given "address".
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/whats_the_temp`. To experiment with that code, run `bin/console` for an interactive prompt.
+_(Note that "address" is sort of ambiguous intentionally)_
+
+## prerequisites
+
+- Ruby 3.2.x
+- An API key from <https://www.weatherapi.com/>. This involves signing up for a free account, and they will give you the API key.
+- Make sure the environment variable `WEATHER_API_KEY` is set to the value of your API key and exported in the environment.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Install the app by cloning it from <https://github.com/tamouse/whats_the_temp> and running bundler to install everything.
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+    git clone 'https://github.com/tamouse/whats_the_temp.git'
+    cd whats_the_temp
+    bundle install
+    export WEATHER_API_KEY=<your-weatherapi-key>
 
 ## Usage
 
-TODO: Write usage instructions here
+First usage, just run the bin at `exe/whats_the_temp`:
+
+    bundle exec exe/whats_the_temp 
+
+This will print out the full usage for the app. The usage display is also available in the usual ways:
+
+    bundle exec exe/whats_the_temp -h
+    bundle exec exe/whats_the_temp --help 
+
+### examples
+
+    bundle exec exe/whats_the_temp 95112 # => "The current temp at 95112 is at 51.8 degrees Fahrenheit"
+    bundle exec exe/whats_the_temp 'San Jose' # => "The current temp at San Jose is at 51.8 degrees Fahrenheit"
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bundle install` to install all the dependencies.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Run the tests with `bundle exec rake`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/whats_the_temp.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tamouse/whats_the_temp.
+
