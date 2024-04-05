@@ -3,30 +3,4 @@
 
 require "whats_the_temp"
 
-USAGE = %{
-WEATHER: Provides the current temperature in Fahrenheit for the given address.
-
-USAGE: weather [-h | --help | <address>]
-
--h, --help: show this usage document
-<address>: show the temperature in Fahrenheit for the given address where address can be one of:
-  - zip or postal code
-  - city name
-  - lat,long
-  - IP address
-
-}
-
-arg = ARGV.first.to_s
-
-if arg == "-h" || arg == "--help"
-  puts USAGE
-  exit 0
-elsif arg.match?(/^-+/)
-  warn "Invalid option #{arg.inspect}\n"
-  puts USAGE
-  exit -1
-else
-  temp = WhatsTheTemp::WeatherApi.new.current_temp_for(arg)
-  puts "Current temperature for #{arg}: #{temp.inspect}"
-end
+WhatsTheTemp::CLI.call

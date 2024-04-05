@@ -19,3 +19,10 @@ Layout/LineLength:
 
 Minitest/EmptyLineBeforeAssertionMethods:
   Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/ParameterLists:
+  Max: 6
+  MaxOptionalParameters: 5
